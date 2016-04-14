@@ -1,23 +1,76 @@
-<%= simple_form_for(@content) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :title %>
-    <%= f.input :info %>
-    <%= f.input :content_url %>
-    <%= f.input :content_price %>
-    <%= f.input :status %>
-    <%= f.input :product_id %>
-    <%= f.input :cover %>
-    <%= f.input :hpub_url %>
-    <%= f.input :content_id %>
-    <%= f.association :app %>
-    <%= f.association :user %>
-    <%= f.input :publish_date %>
-    <%= f.input :publish_platform %>
+<%= form_for @content, :html => { :class => 'form-horizontal form-model' } do |f| %>
+  <div class="form-group">
+    <%= f.label :title, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :title, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :info, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :info, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :content_url, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :content_url, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :content_price, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :content_price, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :status, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :status, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :product_id, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :product_id, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :cover, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :cover, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :hpub_url, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :hpub_url, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :content_id, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :content_id, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :publish_date, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.datetime_select :publish_date, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :publish_platform, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :publish_platform, :class => 'text-field form-control' %>
+    </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  contents_path, :class => 'btn btn-default' %>
+    </div>
   </div>
 <% end %>
