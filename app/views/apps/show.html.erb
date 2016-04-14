@@ -1,199 +1,98 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = App -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => App %></h1>
+</div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @app.title %>
-</p>
+<div class="fieldset">
+  <dl>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:title) %></dt>
+      <dd><pre class="prettyprint"><%= @app.title %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:description) %></dt>
+      <dd><pre class="prettyprint"><%= @app.description %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:appstore_url) %></dt>
+      <dd><pre class="prettyprint"><%= @app.appstore_url %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:googleplay_url) %></dt>
+      <dd><pre class="prettyprint"><%= @app.googleplay_url %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:amazon_url) %></dt>
+      <dd><pre class="prettyprint"><%= @app.amazon_url %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:hub_url) %></dt>
+      <dd><pre class="prettyprint"><%= @app.hub_url %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:appstore_category) %></dt>
+      <dd><pre class="prettyprint"><%= @app.appstore_category %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:googleplay_category) %></dt>
+      <dd><pre class="prettyprint"><%= @app.googleplay_category %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:amazon_category) %></dt>
+      <dd><pre class="prettyprint"><%= @app.amazon_category %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:site_url) %></dt>
+      <dd><pre class="prettyprint"><%= @app.site_url %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:contact_email) %></dt>
+      <dd><pre class="prettyprint"><%= @app.contact_email %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:app_plan) %></dt>
+      <dd><pre class="prettyprint"><%= @app.app_plan %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:logo_url) %></dt>
+      <dd><pre class="prettyprint"><%= @app.logo_url %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:appicon_url) %></dt>
+      <dd><pre class="prettyprint"><%= @app.appicon_url %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:status) %></dt>
+      <dd><pre class="prettyprint"><%= @app.status %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:app_rating) %></dt>
+      <dd><pre class="prettyprint"><%= @app.app_rating %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:app_price) %></dt>
+      <dd><pre class="prettyprint"><%= @app.app_price %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:app_availability) %></dt>
+      <dd><pre class="prettyprint"><%= @app.app_availability %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:keywords) %></dt>
+      <dd><pre class="prettyprint"><%= @app.keywords %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:app_version) %></dt>
+      <dd><pre class="prettyprint"><%= @app.app_version %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:copyright) %></dt>
+      <dd><pre class="prettyprint"><%= @app.copyright %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:appstore_category2) %></dt>
+      <dd><pre class="prettyprint"><%= @app.appstore_category2 %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:theme_color) %></dt>
+      <dd><pre class="prettyprint"><%= @app.theme_color %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:rss_feed_url) %></dt>
+      <dd><pre class="prettyprint"><%= @app.rss_feed_url %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:ga_app_id) %></dt>
+      <dd><pre class="prettyprint"><%= @app.ga_app_id %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:ga_hub_id) %></dt>
+      <dd><pre class="prettyprint"><%= @app.ga_hub_id %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:blog_url) %></dt>
+      <dd><pre class="prettyprint"><%= @app.blog_url %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:facebook_url) %></dt>
+      <dd><pre class="prettyprint"><%= @app.facebook_url %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:twitter_url) %></dt>
+      <dd><pre class="prettyprint"><%= @app.twitter_url %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:instagram_url) %></dt>
+      <dd><pre class="prettyprint"><%= @app.instagram_url %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:googleplus_url) %></dt>
+      <dd><pre class="prettyprint"><%= @app.googleplus_url %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:linkedin_url) %></dt>
+      <dd><pre class="prettyprint"><%= @app.linkedin_url %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:youtube_url) %></dt>
+      <dd><pre class="prettyprint"><%= @app.youtube_url %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:vimeo_url) %></dt>
+      <dd><pre class="prettyprint"><%= @app.vimeo_url %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:pinterest_url) %></dt>
+      <dd><pre class="prettyprint"><%= @app.pinterest_url %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:store_url) %></dt>
+      <dd><pre class="prettyprint"><%= @app.store_url %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:content_frequency) %></dt>
+      <dd><pre class="prettyprint"><%= @app.content_frequency %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:user_subscription) %></dt>
+      <dd><pre class="prettyprint"><%= @app.user_subscription %></pre></dd>
+  </dl>
+</div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @app.description %>
-</p>
+<div class="form-group">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              apps_path, :class => 'btn btn-default'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_app_path(@app), :class => 'btn btn-default' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              app_path(@app),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
 
-<p>
-  <strong>Appstore url:</strong>
-  <%= @app.appstore_url %>
-</p>
-
-<p>
-  <strong>Googleplay url:</strong>
-  <%= @app.googleplay_url %>
-</p>
-
-<p>
-  <strong>Amazon url:</strong>
-  <%= @app.amazon_url %>
-</p>
-
-<p>
-  <strong>Hub url:</strong>
-  <%= @app.hub_url %>
-</p>
-
-<p>
-  <strong>Appstore category:</strong>
-  <%= @app.appstore_category %>
-</p>
-
-<p>
-  <strong>Googleplay category:</strong>
-  <%= @app.googleplay_category %>
-</p>
-
-<p>
-  <strong>Amazon category:</strong>
-  <%= @app.amazon_category %>
-</p>
-
-<p>
-  <strong>Site url:</strong>
-  <%= @app.site_url %>
-</p>
-
-<p>
-  <strong>Contact email:</strong>
-  <%= @app.contact_email %>
-</p>
-
-<p>
-  <strong>App plan:</strong>
-  <%= @app.app_plan %>
-</p>
-
-<p>
-  <strong>Logo url:</strong>
-  <%= @app.logo_url %>
-</p>
-
-<p>
-  <strong>Appicon url:</strong>
-  <%= @app.appicon_url %>
-</p>
-
-<p>
-  <strong>Status:</strong>
-  <%= @app.status %>
-</p>
-
-<p>
-  <strong>App rating:</strong>
-  <%= @app.app_rating %>
-</p>
-
-<p>
-  <strong>App price:</strong>
-  <%= @app.app_price %>
-</p>
-
-<p>
-  <strong>App availability:</strong>
-  <%= @app.app_availability %>
-</p>
-
-<p>
-  <strong>Keywords:</strong>
-  <%= @app.keywords %>
-</p>
-
-<p>
-  <strong>App version:</strong>
-  <%= @app.app_version %>
-</p>
-
-<p>
-  <strong>Copyright:</strong>
-  <%= @app.copyright %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @app.user %>
-</p>
-
-<p>
-  <strong>Appstore category2:</strong>
-  <%= @app.appstore_category2 %>
-</p>
-
-<p>
-  <strong>Theme color:</strong>
-  <%= @app.theme_color %>
-</p>
-
-<p>
-  <strong>Rss feed url:</strong>
-  <%= @app.rss_feed_url %>
-</p>
-
-<p>
-  <strong>Ga app:</strong>
-  <%= @app.ga_app_id %>
-</p>
-
-<p>
-  <strong>Ga hub:</strong>
-  <%= @app.ga_hub_id %>
-</p>
-
-<p>
-  <strong>Blog url:</strong>
-  <%= @app.blog_url %>
-</p>
-
-<p>
-  <strong>Facebook url:</strong>
-  <%= @app.facebook_url %>
-</p>
-
-<p>
-  <strong>Twitter url:</strong>
-  <%= @app.twitter_url %>
-</p>
-
-<p>
-  <strong>Instagram url:</strong>
-  <%= @app.instagram_url %>
-</p>
-
-<p>
-  <strong>Googleplus url:</strong>
-  <%= @app.googleplus_url %>
-</p>
-
-<p>
-  <strong>Linkedin url:</strong>
-  <%= @app.linkedin_url %>
-</p>
-
-<p>
-  <strong>Youtube url:</strong>
-  <%= @app.youtube_url %>
-</p>
-
-<p>
-  <strong>Vimeo url:</strong>
-  <%= @app.vimeo_url %>
-</p>
-
-<p>
-  <strong>Pinterest url:</strong>
-  <%= @app.pinterest_url %>
-</p>
-
-<p>
-  <strong>Store url:</strong>
-  <%= @app.store_url %>
-</p>
-
-<p>
-  <strong>Content frequency:</strong>
-  <%= @app.content_frequency %>
-</p>
-
-<p>
-  <strong>User subscription:</strong>
-  <%= @app.user_subscription %>
-</p>
-
-<%= link_to 'Edit', edit_app_path(@app) %> |
-<%= link_to 'Back', apps_path %>

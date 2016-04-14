@@ -1,49 +1,238 @@
-<%= simple_form_for(@app) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :title %>
-    <%= f.input :description %>
-    <%= f.input :appstore_url %>
-    <%= f.input :googleplay_url %>
-    <%= f.input :amazon_url %>
-    <%= f.input :hub_url %>
-    <%= f.input :appstore_category %>
-    <%= f.input :googleplay_category %>
-    <%= f.input :amazon_category %>
-    <%= f.input :site_url %>
-    <%= f.input :contact_email %>
-    <%= f.input :app_plan %>
-    <%= f.input :logo_url %>
-    <%= f.input :appicon_url %>
-    <%= f.input :status %>
-    <%= f.input :app_rating %>
-    <%= f.input :app_price %>
-    <%= f.input :app_availability %>
-    <%= f.input :keywords %>
-    <%= f.input :app_version %>
-    <%= f.input :copyright %>
-    <%= f.association :user %>
-    <%= f.input :appstore_category2 %>
-    <%= f.input :theme_color %>
-    <%= f.input :rss_feed_url %>
-    <%= f.input :ga_app_id %>
-    <%= f.input :ga_hub_id %>
-    <%= f.input :blog_url %>
-    <%= f.input :facebook_url %>
-    <%= f.input :twitter_url %>
-    <%= f.input :instagram_url %>
-    <%= f.input :googleplus_url %>
-    <%= f.input :linkedin_url %>
-    <%= f.input :youtube_url %>
-    <%= f.input :vimeo_url %>
-    <%= f.input :pinterest_url %>
-    <%= f.input :store_url %>
-    <%= f.input :content_frequency %>
-    <%= f.input :user_subscription %>
+<%= form_for @app, :html => { :class => 'form-horizontal form-model' } do |f| %>
+  <div class="form-group">
+    <%= f.label :title, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :title, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :description, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :description, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :appstore_url, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :appstore_url, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :googleplay_url, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :googleplay_url, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :amazon_url, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :amazon_url, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :hub_url, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :hub_url, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :appstore_category, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :appstore_category, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :googleplay_category, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :googleplay_category, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :amazon_category, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :amazon_category, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :site_url, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :site_url, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :contact_email, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.email_field :contact_email, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :app_plan, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :app_plan, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :logo_url, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :logo_url, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :appicon_url, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :appicon_url, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :status, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :status, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :app_rating, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :app_rating, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :app_price, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :app_price, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :app_availability, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :app_availability, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :keywords, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :keywords, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :app_version, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :app_version, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :copyright, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :copyright, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :appstore_category2, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :appstore_category2, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :theme_color, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :theme_color, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :rss_feed_url, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :rss_feed_url, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :ga_app_id, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :ga_app_id, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :ga_hub_id, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :ga_hub_id, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :blog_url, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :blog_url, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :facebook_url, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :facebook_url, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :twitter_url, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :twitter_url, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :instagram_url, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :instagram_url, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :googleplus_url, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :googleplus_url, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :linkedin_url, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :linkedin_url, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :youtube_url, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :youtube_url, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :vimeo_url, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :vimeo_url, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :pinterest_url, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :pinterest_url, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :store_url, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :store_url, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :content_frequency, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :content_frequency, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :user_subscription, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :user_subscription, :class => 'text-field form-control' %>
+    </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  apps_path, :class => 'btn btn-default' %>
+    </div>
   </div>
 <% end %>

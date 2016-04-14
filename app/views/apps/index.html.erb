@@ -1,54 +1,57 @@
-<h1>Listing apps</h1>
-
-<table>
+<%- model_class = App -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => App %></h1>
+</div>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Appstore url</th>
-      <th>Googleplay url</th>
-      <th>Amazon url</th>
-      <th>Hub url</th>
-      <th>Appstore category</th>
-      <th>Googleplay category</th>
-      <th>Amazon category</th>
-      <th>Site url</th>
-      <th>Contact email</th>
-      <th>App plan</th>
-      <th>Logo url</th>
-      <th>Appicon url</th>
-      <th>Status</th>
-      <th>App rating</th>
-      <th>App price</th>
-      <th>App availability</th>
-      <th>Keywords</th>
-      <th>App version</th>
-      <th>Copyright</th>
-      <th>User</th>
-      <th>Appstore category2</th>
-      <th>Theme color</th>
-      <th>Rss feed url</th>
-      <th>Ga app</th>
-      <th>Ga hub</th>
-      <th>Blog url</th>
-      <th>Facebook url</th>
-      <th>Twitter url</th>
-      <th>Instagram url</th>
-      <th>Googleplus url</th>
-      <th>Linkedin url</th>
-      <th>Youtube url</th>
-      <th>Vimeo url</th>
-      <th>Pinterest url</th>
-      <th>Store url</th>
-      <th>Content frequency</th>
-      <th>User subscription</th>
-      <th colspan="3"></th>
+      <th>ID</th>
+      <th><%= model_class.human_attribute_name(:title) %></th>
+      <th><%= model_class.human_attribute_name(:description) %></th>
+      <th><%= model_class.human_attribute_name(:appstore_url) %></th>
+      <th><%= model_class.human_attribute_name(:googleplay_url) %></th>
+      <th><%= model_class.human_attribute_name(:amazon_url) %></th>
+      <th><%= model_class.human_attribute_name(:hub_url) %></th>
+      <th><%= model_class.human_attribute_name(:appstore_category) %></th>
+      <th><%= model_class.human_attribute_name(:googleplay_category) %></th>
+      <th><%= model_class.human_attribute_name(:amazon_category) %></th>
+      <th><%= model_class.human_attribute_name(:site_url) %></th>
+      <th><%= model_class.human_attribute_name(:contact_email) %></th>
+      <th><%= model_class.human_attribute_name(:app_plan) %></th>
+      <th><%= model_class.human_attribute_name(:logo_url) %></th>
+      <th><%= model_class.human_attribute_name(:appicon_url) %></th>
+      <th><%= model_class.human_attribute_name(:status) %></th>
+      <th><%= model_class.human_attribute_name(:app_rating) %></th>
+      <th><%= model_class.human_attribute_name(:app_price) %></th>
+      <th><%= model_class.human_attribute_name(:app_availability) %></th>
+      <th><%= model_class.human_attribute_name(:keywords) %></th>
+      <th><%= model_class.human_attribute_name(:app_version) %></th>
+      <th><%= model_class.human_attribute_name(:copyright) %></th>
+      <th><%= model_class.human_attribute_name(:appstore_category2) %></th>
+      <th><%= model_class.human_attribute_name(:theme_color) %></th>
+      <th><%= model_class.human_attribute_name(:rss_feed_url) %></th>
+      <th><%= model_class.human_attribute_name(:ga_app_id) %></th>
+      <th><%= model_class.human_attribute_name(:ga_hub_id) %></th>
+      <th><%= model_class.human_attribute_name(:blog_url) %></th>
+      <th><%= model_class.human_attribute_name(:facebook_url) %></th>
+      <th><%= model_class.human_attribute_name(:twitter_url) %></th>
+      <th><%= model_class.human_attribute_name(:instagram_url) %></th>
+      <th><%= model_class.human_attribute_name(:googleplus_url) %></th>
+      <th><%= model_class.human_attribute_name(:linkedin_url) %></th>
+      <th><%= model_class.human_attribute_name(:youtube_url) %></th>
+      <th><%= model_class.human_attribute_name(:vimeo_url) %></th>
+      <th><%= model_class.human_attribute_name(:pinterest_url) %></th>
+      <th><%= model_class.human_attribute_name(:store_url) %></th>
+      <th><%= model_class.human_attribute_name(:content_frequency) %></th>
+      <th><%= model_class.human_attribute_name(:user_subscription) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
-
   <tbody>
     <% @apps.each do |app| %>
       <tr>
+        <td><%= app.id %></td>
         <td><%= app.title %></td>
         <td><%= app.description %></td>
         <td><%= app.appstore_url %></td>
@@ -70,7 +73,6 @@
         <td><%= app.keywords %></td>
         <td><%= app.app_version %></td>
         <td><%= app.copyright %></td>
-        <td><%= app.user %></td>
         <td><%= app.appstore_category2 %></td>
         <td><%= app.theme_color %></td>
         <td><%= app.rss_feed_url %></td>
@@ -88,14 +90,21 @@
         <td><%= app.store_url %></td>
         <td><%= app.content_frequency %></td>
         <td><%= app.user_subscription %></td>
-        <td><%= link_to 'Show', app %></td>
-        <td><%= link_to 'Edit', edit_app_path(app) %></td>
-        <td><%= link_to 'Destroy', app, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%=l app.created_at, format: :long %></td>
+        <td>
+          <%= link_to app_path(app), :class => 'btn btn-xs', :title => "#{ t('.show', :default => t('helpers.links.show')) }" do %>
+            <%= glyph 'info-sign' %>
+            <%= glyph 'pencil' %>
+          <%- end -%>
+          <%= link_to app_path(app), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-xs', :title => "#{ t('.destroy', :default => t('helpers.links.destroy')) }" do %>
+            <%= glyph 'remove' %>
+          <%- end -%>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New App', new_app_path %>
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_app_path,
+            :class => 'btn btn-primary' %>
