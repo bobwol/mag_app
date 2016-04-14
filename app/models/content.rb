@@ -3,4 +3,5 @@ class Content < ActiveRecord::Base
   belongs_to :user
   validates_formatting_of :content_url, using: :url
   validates_formatting_of :cover, using: :url
+  validates_formatting_of :hpub_url, using: :url
 end
