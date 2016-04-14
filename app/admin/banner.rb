@@ -1,4 +1,5 @@
 ActiveAdmin.register Banner do
+  permit_params :title, :banner_url, :banner_image_url
 
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
