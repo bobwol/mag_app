@@ -1,0 +1,83 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  appstore_url: MyString
+  googleplay_url: MyString
+  amazon_url: MyString
+  hub_url: MyString
+  appstore_category: MyString
+  googleplay_category: MyString
+  amazon_category: MyString
+  site_url: MyString
+  contact_email: MyString
+  app_plan: MyString
+  logo_url: MyString
+  appicon_url: MyString
+  status: MyString
+  app_rating: MyString
+  app_price: MyString
+  app_availability: MyString
+  keywords: MyString
+  app_version: MyString
+  copyright: MyString
+  user_id: 
+  appstore_category2: MyString
+  theme_color: MyString
+  rss_feed_url: MyString
+  ga_app_id: MyString
+  ga_hub_id: MyString
+  blog_url: MyString
+  facebook_url: MyString
+  twitter_url: MyString
+  instagram_url: MyString
+  googleplus_url: MyString
+  linkedin_url: MyString
+  youtube_url: MyString
+  vimeo_url: MyString
+  pinterest_url: MyString
+  store_url: MyString
+  content_frequency: MyString
+  user_subscription: MyString
+
+two:
+  title: MyString
+  description: MyText
+  appstore_url: MyString
+  googleplay_url: MyString
+  amazon_url: MyString
+  hub_url: MyString
+  appstore_category: MyString
+  googleplay_category: MyString
+  amazon_category: MyString
+  site_url: MyString
+  contact_email: MyString
+  app_plan: MyString
+  logo_url: MyString
+  appicon_url: MyString
+  status: MyString
+  app_rating: MyString
+  app_price: MyString
+  app_availability: MyString
+  keywords: MyString
+  app_version: MyString
+  copyright: MyString
+  user_id: 
+  appstore_category2: MyString
+  theme_color: MyString
+  rss_feed_url: MyString
+  ga_app_id: MyString
+  ga_hub_id: MyString
+  blog_url: MyString
+  facebook_url: MyString
+  twitter_url: MyString
+  instagram_url: MyString
+  googleplus_url: MyString
+  linkedin_url: MyString
+  youtube_url: MyString
+  vimeo_url: MyString
+  pinterest_url: MyString
+  store_url: MyString
+  content_frequency: MyString
+  user_subscription: MyString
