@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  plan_name: MyString
+  billing_cycle: MyString
+  payment_form: MyString
+  app_id: 
+  user_id: 
+
+two:
+  plan_name: MyString
+  billing_cycle: MyString
+  payment_form: MyString
+  app_id: 
+  user_id: 
