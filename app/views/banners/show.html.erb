@@ -1,29 +1,28 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Banner -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => Banner %></h1>
+</div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @banner.title %>
-</p>
+<div class="fieldset">
+  <dl>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:title) %></dt>
+      <dd><pre class="prettyprint"><%= @banner.title %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:banner_url) %></dt>
+      <dd><pre class="prettyprint"><%= @banner.banner_url %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:banner_image_url) %></dt>
+      <dd><pre class="prettyprint"><%= @banner.banner_image_url %></pre></dd>
+  </dl>
+</div>
 
-<p>
-  <strong>Banner url:</strong>
-  <%= @banner.banner_url %>
-</p>
+<div class="form-group">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              banners_path, :class => 'btn btn-default'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_banner_path(@banner), :class => 'btn btn-default' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              banner_path(@banner),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
 
-<p>
-  <strong>Banner image url:</strong>
-  <%= @banner.banner_image_url %>
-</p>
-
-<p>
-  <strong>App:</strong>
-  <%= @banner.app %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @banner.user %>
-</p>
-
-<%= link_to 'Edit', edit_banner_path(@banner) %> |
-<%= link_to 'Back', banners_path %>

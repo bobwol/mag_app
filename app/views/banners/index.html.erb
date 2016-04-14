@@ -1,33 +1,40 @@
-<h1>Listing banners</h1>
-
-<table>
+<%- model_class = Banner -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => Banner %></h1>
+</div>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Banner url</th>
-      <th>Banner image url</th>
-      <th>App</th>
-      <th>User</th>
-      <th colspan="3"></th>
+      <th>ID</th>
+      <th><%= model_class.human_attribute_name(:title) %></th>
+      <th><%= model_class.human_attribute_name(:banner_url) %></th>
+      <th><%= model_class.human_attribute_name(:banner_image_url) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
-
   <tbody>
     <% @banners.each do |banner| %>
       <tr>
+        <td><%= banner.id %></td>
         <td><%= banner.title %></td>
         <td><%= banner.banner_url %></td>
         <td><%= banner.banner_image_url %></td>
-        <td><%= banner.app %></td>
-        <td><%= banner.user %></td>
-        <td><%= link_to 'Show', banner %></td>
-        <td><%= link_to 'Edit', edit_banner_path(banner) %></td>
-        <td><%= link_to 'Destroy', banner, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%=l banner.created_at, format: :long %></td>
+        <td>
+          <%= link_to banner_path(banner), :class => 'btn btn-xs', :title => "#{ t('.show', :default => t('helpers.links.show')) }" do %>
+            <%= glyph 'info-sign' %>
+            <%= glyph 'pencil' %>
+          <%- end -%>
+          <%= link_to banner_path(banner), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-xs', :title => "#{ t('.destroy', :default => t('helpers.links.destroy')) }" do %>
+            <%= glyph 'remove' %>
+          <%- end -%>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Banner', new_banner_path %>
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_banner_path,
+            :class => 'btn btn-primary' %>
