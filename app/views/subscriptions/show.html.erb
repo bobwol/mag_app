@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Plan name:</strong>
+  <%= @subscription.plan_name %>
+</p>
+
+<p>
+  <strong>Billing cycle:</strong>
+  <%= @subscription.billing_cycle %>
+</p>
+
+<p>
+  <strong>Payment form:</strong>
+  <%= @subscription.payment_form %>
+</p>
+
+<p>
+  <strong>App:</strong>
+  <%= @subscription.app %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @subscription.user %>
+</p>
+
+<%= link_to 'Edit', edit_subscription_path(@subscription) %> |
+<%= link_to 'Back', subscriptions_path %>
