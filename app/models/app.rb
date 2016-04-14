@@ -5,4 +5,5 @@ class App < ActiveRecord::Base
   has_one :banner
   validates_formatting_of :appstore_url, using: :url
   validates_formatting_of :googleplay_url, using: :url
+  validates_formatting_of :amazon_url, using: :url
 end
