@@ -11,4 +11,5 @@ class App < ActiveRecord::Base
   validates_formatting_of :contact_email, using: :email
   validates_formatting_of :logo_url, using: :url
   validates_formatting_of :appicon_url, using: :url
+  validates_formatting_of :theme_color, using: :hex_color
 end
