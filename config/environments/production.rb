@@ -79,4 +79,9 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  #->Prelang
+  GA.tracker = "UA-12345678-1"
+
 end
+
