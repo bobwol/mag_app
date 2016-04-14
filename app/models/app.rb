@@ -21,4 +21,5 @@ class App < ActiveRecord::Base
   validates_formatting_of :linkedin_url, using: :url
   validates_formatting_of :youtube_url, using: :url
   validates_formatting_of :vimeo_url, using: :url
+  validates_formatting_of :pinterest_url, using: :url
 end
