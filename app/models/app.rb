@@ -18,4 +18,5 @@ class App < ActiveRecord::Base
   validates_formatting_of :twitter_url, using: :url
   validates_formatting_of :instagram_url, using: :url
   validates_formatting_of :googleplus_url, using: :url
+  validates_formatting_of :linkedin_url, using: :url
 end
