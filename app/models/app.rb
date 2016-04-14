@@ -14,4 +14,5 @@ class App < ActiveRecord::Base
   validates_formatting_of :theme_color, using: :hex_color
   validates_formatting_of :rss_feed_url, using: :url
   validates_formatting_of :blog_url, using: :url
+  validates_formatting_of :facebook_url, using: :url
 end
