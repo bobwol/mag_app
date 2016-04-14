@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  info: MyString
+  content_url: MyString
+  content_price: MyString
+  status: MyString
+  product_id: MyString
+  cover: MyString
+  hpub_url: MyString
+  content_id: MyString
+  app_id: 
+  user_id: 
+  publish_date: 2016-04-14 02:19:29
+  publish_platform: MyString
+
+two:
+  title: MyString
+  info: MyString
+  content_url: MyString
+  content_price: MyString
+  status: MyString
+  product_id: MyString
+  cover: MyString
+  hpub_url: MyString
+  content_id: MyString
+  app_id: 
+  user_id: 
+  publish_date: 2016-04-14 02:19:29
+  publish_platform: MyString
