@@ -8,4 +8,5 @@ class App < ActiveRecord::Base
   validates_formatting_of :amazon_url, using: :url
   validates_formatting_of :hub_url, using: :url
   validates_formatting_of :site_url, using: :url
+  validates_formatting_of :contact_email, using: :email
 end
