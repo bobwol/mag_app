@@ -1,4 +1,5 @@
 ActiveAdmin.register Statistic do
+  permit_params :ios_installs, :android_installs, :users_total
 
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
