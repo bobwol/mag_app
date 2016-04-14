@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  push_message: MyString
+  delivery_time: 2016-04-14 02:19:23
+  push_app_id: MyString
+  push_client_key: MyString
+  push_restapi_key: MyString
+  appstore_prod_cert: MyString
+  appstore_dev_cert: MyString
+  gcm_sender_id: MyString
+  gcm_api_key: MyString
+  app_id: 
+  user_id: 
+
+two:
+  push_message: MyString
+  delivery_time: 2016-04-14 02:19:23
+  push_app_id: MyString
+  push_client_key: MyString
+  push_restapi_key: MyString
+  appstore_prod_cert: MyString
+  appstore_dev_cert: MyString
+  gcm_sender_id: MyString
+  gcm_api_key: MyString
+  app_id: 
+  user_id: 
