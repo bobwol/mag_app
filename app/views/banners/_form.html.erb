@@ -1,0 +1,15 @@
+<%= simple_form_for(@banner) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :title %>
+    <%= f.input :banner_url %>
+    <%= f.input :banner_image_url %>
+    <%= f.association :app %>
+    <%= f.association :user %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
