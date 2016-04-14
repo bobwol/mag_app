@@ -1,29 +1,28 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Statistic -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => Statistic %></h1>
+</div>
 
-<p>
-  <strong>Ios installs:</strong>
-  <%= @statistic.ios_installs %>
-</p>
+<div class="fieldset">
+  <dl>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:ios_installs) %></dt>
+      <dd><pre class="prettyprint"><%= @statistic.ios_installs %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:android_installs) %></dt>
+      <dd><pre class="prettyprint"><%= @statistic.android_installs %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:users_total) %></dt>
+      <dd><pre class="prettyprint"><%= @statistic.users_total %></pre></dd>
+  </dl>
+</div>
 
-<p>
-  <strong>Android installs:</strong>
-  <%= @statistic.android_installs %>
-</p>
+<div class="form-group">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              statistics_path, :class => 'btn btn-default'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_statistic_path(@statistic), :class => 'btn btn-default' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              statistic_path(@statistic),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
 
-<p>
-  <strong>App:</strong>
-  <%= @statistic.app %>
-</p>
-
-<p>
-  <strong>Users total:</strong>
-  <%= @statistic.users_total %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @statistic.user %>
-</p>
-
-<%= link_to 'Edit', edit_statistic_path(@statistic) %> |
-<%= link_to 'Back', statistics_path %>

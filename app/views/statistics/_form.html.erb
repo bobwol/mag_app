@@ -1,15 +1,28 @@
-<%= simple_form_for(@statistic) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :ios_installs %>
-    <%= f.input :android_installs %>
-    <%= f.association :app %>
-    <%= f.input :users_total %>
-    <%= f.association :user %>
+<%= form_for @statistic, :html => { :class => 'form-horizontal form-model' } do |f| %>
+  <div class="form-group">
+    <%= f.label :ios_installs, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :ios_installs, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :android_installs, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :android_installs, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :users_total, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :users_total, :class => 'text-field form-control' %>
+    </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  statistics_path, :class => 'btn btn-default' %>
+    </div>
   </div>
 <% end %>
