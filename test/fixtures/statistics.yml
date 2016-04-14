@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ios_installs: MyString
+  android_installs: MyString
+  app_id: 
+  users_total: MyString
+  user_id: 
+
+two:
+  ios_installs: MyString
+  android_installs: MyString
+  app_id: 
+  users_total: MyString
+  user_id: 
