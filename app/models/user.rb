@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
   has_many :pushes
   has_many :statistics
   has_many :subscriptions
+  has_many :banners
   def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
     user = User.where(provider: auth.provider, uid: auth.uid).first
 
