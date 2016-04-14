@@ -32,4 +32,5 @@ class User < ActiveRecord::Base
   end
 
 
+  validates_formatting_of :site_url, using: :url
 end
