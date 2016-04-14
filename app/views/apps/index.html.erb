@@ -1,0 +1,101 @@
+<h1>Listing apps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Appstore url</th>
+      <th>Googleplay url</th>
+      <th>Amazon url</th>
+      <th>Hub url</th>
+      <th>Appstore category</th>
+      <th>Googleplay category</th>
+      <th>Amazon category</th>
+      <th>Site url</th>
+      <th>Contact email</th>
+      <th>App plan</th>
+      <th>Logo url</th>
+      <th>Appicon url</th>
+      <th>Status</th>
+      <th>App rating</th>
+      <th>App price</th>
+      <th>App availability</th>
+      <th>Keywords</th>
+      <th>App version</th>
+      <th>Copyright</th>
+      <th>User</th>
+      <th>Appstore category2</th>
+      <th>Theme color</th>
+      <th>Rss feed url</th>
+      <th>Ga app</th>
+      <th>Ga hub</th>
+      <th>Blog url</th>
+      <th>Facebook url</th>
+      <th>Twitter url</th>
+      <th>Instagram url</th>
+      <th>Googleplus url</th>
+      <th>Linkedin url</th>
+      <th>Youtube url</th>
+      <th>Vimeo url</th>
+      <th>Pinterest url</th>
+      <th>Store url</th>
+      <th>Content frequency</th>
+      <th>User subscription</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @apps.each do |app| %>
+      <tr>
+        <td><%= app.title %></td>
+        <td><%= app.description %></td>
+        <td><%= app.appstore_url %></td>
+        <td><%= app.googleplay_url %></td>
+        <td><%= app.amazon_url %></td>
+        <td><%= app.hub_url %></td>
+        <td><%= app.appstore_category %></td>
+        <td><%= app.googleplay_category %></td>
+        <td><%= app.amazon_category %></td>
+        <td><%= app.site_url %></td>
+        <td><%= app.contact_email %></td>
+        <td><%= app.app_plan %></td>
+        <td><%= app.logo_url %></td>
+        <td><%= app.appicon_url %></td>
+        <td><%= app.status %></td>
+        <td><%= app.app_rating %></td>
+        <td><%= app.app_price %></td>
+        <td><%= app.app_availability %></td>
+        <td><%= app.keywords %></td>
+        <td><%= app.app_version %></td>
+        <td><%= app.copyright %></td>
+        <td><%= app.user %></td>
+        <td><%= app.appstore_category2 %></td>
+        <td><%= app.theme_color %></td>
+        <td><%= app.rss_feed_url %></td>
+        <td><%= app.ga_app_id %></td>
+        <td><%= app.ga_hub_id %></td>
+        <td><%= app.blog_url %></td>
+        <td><%= app.facebook_url %></td>
+        <td><%= app.twitter_url %></td>
+        <td><%= app.instagram_url %></td>
+        <td><%= app.googleplus_url %></td>
+        <td><%= app.linkedin_url %></td>
+        <td><%= app.youtube_url %></td>
+        <td><%= app.vimeo_url %></td>
+        <td><%= app.pinterest_url %></td>
+        <td><%= app.store_url %></td>
+        <td><%= app.content_frequency %></td>
+        <td><%= app.user_subscription %></td>
+        <td><%= link_to 'Show', app %></td>
+        <td><%= link_to 'Edit', edit_app_path(app) %></td>
+        <td><%= link_to 'Destroy', app, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New App', new_app_path %>

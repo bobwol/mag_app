@@ -1,0 +1,49 @@
+<%= simple_form_for(@app) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :title %>
+    <%= f.input :description %>
+    <%= f.input :appstore_url %>
+    <%= f.input :googleplay_url %>
+    <%= f.input :amazon_url %>
+    <%= f.input :hub_url %>
+    <%= f.input :appstore_category %>
+    <%= f.input :googleplay_category %>
+    <%= f.input :amazon_category %>
+    <%= f.input :site_url %>
+    <%= f.input :contact_email %>
+    <%= f.input :app_plan %>
+    <%= f.input :logo_url %>
+    <%= f.input :appicon_url %>
+    <%= f.input :status %>
+    <%= f.input :app_rating %>
+    <%= f.input :app_price %>
+    <%= f.input :app_availability %>
+    <%= f.input :keywords %>
+    <%= f.input :app_version %>
+    <%= f.input :copyright %>
+    <%= f.association :user %>
+    <%= f.input :appstore_category2 %>
+    <%= f.input :theme_color %>
+    <%= f.input :rss_feed_url %>
+    <%= f.input :ga_app_id %>
+    <%= f.input :ga_hub_id %>
+    <%= f.input :blog_url %>
+    <%= f.input :facebook_url %>
+    <%= f.input :twitter_url %>
+    <%= f.input :instagram_url %>
+    <%= f.input :googleplus_url %>
+    <%= f.input :linkedin_url %>
+    <%= f.input :youtube_url %>
+    <%= f.input :vimeo_url %>
+    <%= f.input :pinterest_url %>
+    <%= f.input :store_url %>
+    <%= f.input :content_frequency %>
+    <%= f.input :user_subscription %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
