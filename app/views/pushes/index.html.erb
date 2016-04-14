@@ -1,0 +1,45 @@
+<h1>Listing pushes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Push message</th>
+      <th>Delivery time</th>
+      <th>Push app</th>
+      <th>Push client key</th>
+      <th>Push restapi key</th>
+      <th>Appstore prod cert</th>
+      <th>Appstore dev cert</th>
+      <th>Gcm sender</th>
+      <th>Gcm api key</th>
+      <th>App</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pushes.each do |push| %>
+      <tr>
+        <td><%= push.push_message %></td>
+        <td><%= push.delivery_time %></td>
+        <td><%= push.push_app_id %></td>
+        <td><%= push.push_client_key %></td>
+        <td><%= push.push_restapi_key %></td>
+        <td><%= push.appstore_prod_cert %></td>
+        <td><%= push.appstore_dev_cert %></td>
+        <td><%= push.gcm_sender_id %></td>
+        <td><%= push.gcm_api_key %></td>
+        <td><%= push.app %></td>
+        <td><%= push.user %></td>
+        <td><%= link_to 'Show', push %></td>
+        <td><%= link_to 'Edit', edit_push_path(push) %></td>
+        <td><%= link_to 'Destroy', push, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Push', new_push_path %>

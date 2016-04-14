@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Push message:</strong>
+  <%= @push.push_message %>
+</p>
+
+<p>
+  <strong>Delivery time:</strong>
+  <%= @push.delivery_time %>
+</p>
+
+<p>
+  <strong>Push app:</strong>
+  <%= @push.push_app_id %>
+</p>
+
+<p>
+  <strong>Push client key:</strong>
+  <%= @push.push_client_key %>
+</p>
+
+<p>
+  <strong>Push restapi key:</strong>
+  <%= @push.push_restapi_key %>
+</p>
+
+<p>
+  <strong>Appstore prod cert:</strong>
+  <%= @push.appstore_prod_cert %>
+</p>
+
+<p>
+  <strong>Appstore dev cert:</strong>
+  <%= @push.appstore_dev_cert %>
+</p>
+
+<p>
+  <strong>Gcm sender:</strong>
+  <%= @push.gcm_sender_id %>
+</p>
+
+<p>
+  <strong>Gcm api key:</strong>
+  <%= @push.gcm_api_key %>
+</p>
+
+<p>
+  <strong>App:</strong>
+  <%= @push.app %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @push.user %>
+</p>
+
+<%= link_to 'Edit', edit_push_path(@push) %> |
+<%= link_to 'Back', pushes_path %>

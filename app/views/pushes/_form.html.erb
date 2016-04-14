@@ -1,0 +1,21 @@
+<%= simple_form_for(@push) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :push_message %>
+    <%= f.input :delivery_time %>
+    <%= f.input :push_app_id %>
+    <%= f.input :push_client_key %>
+    <%= f.input :push_restapi_key %>
+    <%= f.input :appstore_prod_cert %>
+    <%= f.input :appstore_dev_cert %>
+    <%= f.input :gcm_sender_id %>
+    <%= f.input :gcm_api_key %>
+    <%= f.association :app %>
+    <%= f.association :user %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

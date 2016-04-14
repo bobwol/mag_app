@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :pushes
+
   resources :statistics
 
   resources :banners
