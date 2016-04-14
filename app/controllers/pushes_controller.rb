@@ -29,6 +29,7 @@ class PushesController < ApplicationController
   # POST /pushes.json
   def create
     @push = Push.new(push_params)
+    @push.user = current_user
 
     respond_to do |format|
       if @push.save
