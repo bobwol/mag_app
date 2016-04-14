@@ -1,0 +1,15 @@
+<%= simple_form_for(@statistic) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :ios_installs %>
+    <%= f.input :android_installs %>
+    <%= f.association :app %>
+    <%= f.input :users_total %>
+    <%= f.association :user %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

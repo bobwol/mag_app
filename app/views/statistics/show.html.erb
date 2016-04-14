@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ios installs:</strong>
+  <%= @statistic.ios_installs %>
+</p>
+
+<p>
+  <strong>Android installs:</strong>
+  <%= @statistic.android_installs %>
+</p>
+
+<p>
+  <strong>App:</strong>
+  <%= @statistic.app %>
+</p>
+
+<p>
+  <strong>Users total:</strong>
+  <%= @statistic.users_total %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @statistic.user %>
+</p>
+
+<%= link_to 'Edit', edit_statistic_path(@statistic) %> |
+<%= link_to 'Back', statistics_path %>
