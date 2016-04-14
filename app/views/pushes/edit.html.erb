@@ -1,6 +1,5 @@
-<h1>Editing push</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @push %> |
-<%= link_to 'Back', pushes_path %>
+<%- model_class = Push -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => Push %></h1>
+</div>
+<%= render :partial => 'form' %>

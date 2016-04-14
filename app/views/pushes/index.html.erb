@@ -1,26 +1,28 @@
-<h1>Listing pushes</h1>
-
-<table>
+<%- model_class = Push -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => Push %></h1>
+</div>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>Push message</th>
-      <th>Delivery time</th>
-      <th>Push app</th>
-      <th>Push client key</th>
-      <th>Push restapi key</th>
-      <th>Appstore prod cert</th>
-      <th>Appstore dev cert</th>
-      <th>Gcm sender</th>
-      <th>Gcm api key</th>
-      <th>App</th>
-      <th>User</th>
-      <th colspan="3"></th>
+      <th>ID</th>
+      <th><%= model_class.human_attribute_name(:push_message) %></th>
+      <th><%= model_class.human_attribute_name(:delivery_time) %></th>
+      <th><%= model_class.human_attribute_name(:push_app_id) %></th>
+      <th><%= model_class.human_attribute_name(:push_client_key) %></th>
+      <th><%= model_class.human_attribute_name(:push_restapi_key) %></th>
+      <th><%= model_class.human_attribute_name(:appstore_prod_cert) %></th>
+      <th><%= model_class.human_attribute_name(:appstore_dev_cert) %></th>
+      <th><%= model_class.human_attribute_name(:gcm_sender_id) %></th>
+      <th><%= model_class.human_attribute_name(:gcm_api_key) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
-
   <tbody>
     <% @pushes.each do |push| %>
       <tr>
+        <td><%= push.id %></td>
         <td><%= push.push_message %></td>
         <td><%= push.delivery_time %></td>
         <td><%= push.push_app_id %></td>
@@ -30,16 +32,21 @@
         <td><%= push.appstore_dev_cert %></td>
         <td><%= push.gcm_sender_id %></td>
         <td><%= push.gcm_api_key %></td>
-        <td><%= push.app %></td>
-        <td><%= push.user %></td>
-        <td><%= link_to 'Show', push %></td>
-        <td><%= link_to 'Edit', edit_push_path(push) %></td>
-        <td><%= link_to 'Destroy', push, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%=l push.created_at, format: :long %></td>
+        <td>
+          <%= link_to push_path(push), :class => 'btn btn-xs', :title => "#{ t('.show', :default => t('helpers.links.show')) }" do %>
+            <%= glyph 'info-sign' %>
+            <%= glyph 'pencil' %>
+          <%- end -%>
+          <%= link_to push_path(push), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-xs', :title => "#{ t('.destroy', :default => t('helpers.links.destroy')) }" do %>
+            <%= glyph 'remove' %>
+          <%- end -%>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Push', new_push_path %>
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_push_path,
+            :class => 'btn btn-primary' %>

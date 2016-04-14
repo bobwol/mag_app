@@ -1,59 +1,40 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Push -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => Push %></h1>
+</div>
 
-<p>
-  <strong>Push message:</strong>
-  <%= @push.push_message %>
-</p>
+<div class="fieldset">
+  <dl>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:push_message) %></dt>
+      <dd><pre class="prettyprint"><%= @push.push_message %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:delivery_time) %></dt>
+      <dd><pre class="prettyprint"><%= @push.delivery_time %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:push_app_id) %></dt>
+      <dd><pre class="prettyprint"><%= @push.push_app_id %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:push_client_key) %></dt>
+      <dd><pre class="prettyprint"><%= @push.push_client_key %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:push_restapi_key) %></dt>
+      <dd><pre class="prettyprint"><%= @push.push_restapi_key %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:appstore_prod_cert) %></dt>
+      <dd><pre class="prettyprint"><%= @push.appstore_prod_cert %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:appstore_dev_cert) %></dt>
+      <dd><pre class="prettyprint"><%= @push.appstore_dev_cert %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:gcm_sender_id) %></dt>
+      <dd><pre class="prettyprint"><%= @push.gcm_sender_id %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:gcm_api_key) %></dt>
+      <dd><pre class="prettyprint"><%= @push.gcm_api_key %></pre></dd>
+  </dl>
+</div>
 
-<p>
-  <strong>Delivery time:</strong>
-  <%= @push.delivery_time %>
-</p>
+<div class="form-group">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              pushes_path, :class => 'btn btn-default'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_push_path(@push), :class => 'btn btn-default' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              push_path(@push),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
 
-<p>
-  <strong>Push app:</strong>
-  <%= @push.push_app_id %>
-</p>
-
-<p>
-  <strong>Push client key:</strong>
-  <%= @push.push_client_key %>
-</p>
-
-<p>
-  <strong>Push restapi key:</strong>
-  <%= @push.push_restapi_key %>
-</p>
-
-<p>
-  <strong>Appstore prod cert:</strong>
-  <%= @push.appstore_prod_cert %>
-</p>
-
-<p>
-  <strong>Appstore dev cert:</strong>
-  <%= @push.appstore_dev_cert %>
-</p>
-
-<p>
-  <strong>Gcm sender:</strong>
-  <%= @push.gcm_sender_id %>
-</p>
-
-<p>
-  <strong>Gcm api key:</strong>
-  <%= @push.gcm_api_key %>
-</p>
-
-<p>
-  <strong>App:</strong>
-  <%= @push.app %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @push.user %>
-</p>
-
-<%= link_to 'Edit', edit_push_path(@push) %> |
-<%= link_to 'Back', pushes_path %>
