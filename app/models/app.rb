@@ -10,4 +10,5 @@ class App < ActiveRecord::Base
   validates_formatting_of :site_url, using: :url
   validates_formatting_of :contact_email, using: :email
   validates_formatting_of :logo_url, using: :url
+  validates_formatting_of :appicon_url, using: :url
 end
