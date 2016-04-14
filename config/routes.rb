@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :contents
+
   resources :subscriptions
 
   resources :pushes

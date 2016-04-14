@@ -1,0 +1,49 @@
+<h1>Listing contents</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Info</th>
+      <th>Content url</th>
+      <th>Content price</th>
+      <th>Status</th>
+      <th>Product</th>
+      <th>Cover</th>
+      <th>Hpub url</th>
+      <th>Content</th>
+      <th>App</th>
+      <th>User</th>
+      <th>Publish date</th>
+      <th>Publish platform</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @contents.each do |content| %>
+      <tr>
+        <td><%= content.title %></td>
+        <td><%= content.info %></td>
+        <td><%= content.content_url %></td>
+        <td><%= content.content_price %></td>
+        <td><%= content.status %></td>
+        <td><%= content.product_id %></td>
+        <td><%= content.cover %></td>
+        <td><%= content.hpub_url %></td>
+        <td><%= content.content_id %></td>
+        <td><%= content.app %></td>
+        <td><%= content.user %></td>
+        <td><%= content.publish_date %></td>
+        <td><%= content.publish_platform %></td>
+        <td><%= link_to 'Show', content %></td>
+        <td><%= link_to 'Edit', edit_content_path(content) %></td>
+        <td><%= link_to 'Destroy', content, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Content', new_content_path %>

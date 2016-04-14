@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @content.title %>
+</p>
+
+<p>
+  <strong>Info:</strong>
+  <%= @content.info %>
+</p>
+
+<p>
+  <strong>Content url:</strong>
+  <%= @content.content_url %>
+</p>
+
+<p>
+  <strong>Content price:</strong>
+  <%= @content.content_price %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @content.status %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @content.product_id %>
+</p>
+
+<p>
+  <strong>Cover:</strong>
+  <%= @content.cover %>
+</p>
+
+<p>
+  <strong>Hpub url:</strong>
+  <%= @content.hpub_url %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @content.content_id %>
+</p>
+
+<p>
+  <strong>App:</strong>
+  <%= @content.app %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @content.user %>
+</p>
+
+<p>
+  <strong>Publish date:</strong>
+  <%= @content.publish_date %>
+</p>
+
+<p>
+  <strong>Publish platform:</strong>
+  <%= @content.publish_platform %>
+</p>
+
+<%= link_to 'Edit', edit_content_path(@content) %> |
+<%= link_to 'Back', contents_path %>
